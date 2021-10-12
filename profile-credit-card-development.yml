@@ -14,4 +14,4 @@ creditCard:
   api:
     name: CREDIT-CARD-WS
     methodGET:
-      uri: /creditCards/{id}
+      uri: /{id}
