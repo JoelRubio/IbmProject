@@ -1,8 +1,9 @@
 package org.academy.jra.service;
 
-import java.util.List;
+import java.util.Set;
 
-import org.academy.jra.model.Profile;
+import org.academy.jra.model.CreditCardDTO;
+import org.academy.jra.model.ProfileDTO;
 
 /**
  * Interfaz que define los métodos para
@@ -13,4 +14,5 @@ import org.academy.jra.model.Profile;
  */
 public interface ProfileService {
 
+	Set<CreditCardDTO> getCreditCardType(ProfileDTO profileDTO);
 }
