@@ -11,7 +11,8 @@ spring:
       ddl-auto: create
 
 feign:
-  api:
-    name: CREDIT-CARD-WS
-    methodGET:
-      uri: /{id}
+  creditCard:
+    api:
+      name: CREDIT-CARD-WS
+      methodGET:
+        uri: /{id}
