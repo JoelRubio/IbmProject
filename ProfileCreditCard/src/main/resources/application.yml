@@ -1,16 +1,12 @@
+#número del puerto a través de una variable de ambiente del sistema
+#o si no hay ninguno, se asignará un puerto aleatorio disponible.
 server:
-  port: ${PORT:0'}
+  port: ${PORT:0}
 
 spring:
   application:
-    name: profile-credit-card
-  datasource:
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:profileCreditCard
-    username: sa
-    password:
-  jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
-    show-sql: true
-    hibernate:
-      ddl-auto: create
+    name: profile-credit-card-ws
+  profiles:
+    active: development 
+  config:
+    import: configserver:http://localhost:8888 #URL para localizar el config server.

@@ -12,7 +12,7 @@
 	<artifactId>ProfileCreditCard</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ProfileCreditCard</name>
-	<description>Project to get the credit card type from the person profile</description>
+	<description>Microservice for a credit card type from a person profiile</description>
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2020.0.4</spring-cloud.version>
