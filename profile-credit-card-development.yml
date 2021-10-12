@@ -13,4 +13,5 @@ spring:
 creditCard:
   api:
     name: CREDIT-CARD-WS
-    uri: /creditCards
+    methodGET:
+      uri: /creditCards/{id}
