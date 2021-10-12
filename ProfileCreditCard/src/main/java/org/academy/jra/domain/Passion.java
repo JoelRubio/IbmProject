@@ -1,4 +1,4 @@
-package org.academy.jra.model;
+package org.academy.jra.domain;
 
 public enum Passion {
 
