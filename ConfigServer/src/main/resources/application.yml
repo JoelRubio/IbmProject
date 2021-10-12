@@ -1,1 +1,15 @@
-
+server:
+  port: 8888
+  
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/JoelRubio/IbmProject.git
+          username: JoelRubio
+          password: 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
+          clone-on-start: true
+          default-label: main
