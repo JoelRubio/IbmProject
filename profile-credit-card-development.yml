@@ -9,3 +9,8 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: create
+
+credit-card:
+  api:
+    name: CREDIT-CARD-WS
+    uri: /creditCards
