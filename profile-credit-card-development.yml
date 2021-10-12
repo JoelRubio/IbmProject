@@ -10,7 +10,7 @@ spring:
     hibernate:
       ddl-auto: create
 
-credit-card:
+creditCard:
   api:
     name: CREDIT-CARD-WS
     uri: /creditCards
