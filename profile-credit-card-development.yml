@@ -10,7 +10,7 @@ spring:
     hibernate:
       ddl-auto: create
 
-creditCard:
+feign:
   api:
     name: CREDIT-CARD-WS
     methodGET:
