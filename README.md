@@ -82,3 +82,20 @@ Estos parámetros pueden ser opcionales pero al menos debe de haber un parámetr
 - http://localhost:{random-port}/locations?place=<value\>
 
 ### Capturas de pantalla sobre el resultado de los microservicios
+
+Con todos los parámetros:
+
+Sólo la latitud:
+
+
+Sólo la longitud:
+
+Sólo el código postal:
+![image](https://user-images.githubusercontent.com/46584463/137562308-ca043416-c16b-4d30-9d21-7fbc8d852010.png)
+
+
+Sólo el lugar (Delegación/Estado):
+![image](https://user-images.githubusercontent.com/46584463/137562210-81a714d4-7805-4b64-a172-14cdc1db42d4.png)
+
+
+
