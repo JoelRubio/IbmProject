@@ -20,13 +20,13 @@ Estos parámetros pueden ser opcionales pero al menos debe de haber un parámetr
 
 :bulb: El puerto se asigna de manera aleatoria en tiempo de ejecución.
 
-- http://localhost:{random-port}/profiles?passion=<\value\>&monthlySalary=<value>&age=<value>
-- http://localhost:{random-port}/profiles?passion=<value>&monthlySalary=<value>
-- http://localhost:{random-port}/profiles?passion=<value>&age=<value>
-- http://localhost:{random-port}/profiles?monthlySalary=<value>&age=<value>
-- http://localhost:{random-port}/profiles?passion=<value>
-- http://localhost:{random-port}/profiles?monthlySalary=<value>
-- http://localhost:{random-port}/profiles?age=<value>
+- http://localhost:{random-port}/profiles?passion=<value\>&monthlySalary=<value\>&age=<value\>
+- http://localhost:{random-port}/profiles?passion=<value\>&monthlySalary=<value\>
+- http://localhost:{random-port}/profiles?passion=<value\>&age=<value\>
+- http://localhost:{random-port}/profiles?monthlySalary=<value\>&age=<value\>
+- http://localhost:{random-port}/profiles?passion=<value\>
+- http://localhost:{random-port}/profiles?monthlySalary=<value\>
+- http://localhost:{random-port}/profiles?age=<value\>
   
 
 ### Capturas de pantalla sobre el resultado de los microservicios
@@ -51,11 +51,11 @@ Estos parámetros pueden ser opcionales pero al menos debe de haber un parámetr
 
 :bulb: El puerto se asigna de manera aleatoria en tiempo de ejecución.
   
-- http://localhost:{random-port}/locations?latitude=<value>&longitude=<value>&postalCode=<value>&place=<value>
+- http://localhost:{random-port}/locations?latitude=<value\>&longitude=<value\>&postalCode=<value\>&place=<value\>
   
-- http://localhost:{random-port}/locations?latitude=<value>
-- http://localhost:{random-port}/locations?longitude=<value>
-- http://localhost:{random-port}/locations?postalCode=<value>
-- http://localhost:{random-port}/locations?place=<value>
+- http://localhost:{random-port}/locations?latitude=<value\>
+- http://localhost:{random-port}/locations?longitude=<value\>
+- http://localhost:{random-port}/locations?postalCode=<value\>
+- http://localhost:{random-port}/locations?place=<value\>
 
 ### Capturas de pantalla sobre el resultado de los microservicios
