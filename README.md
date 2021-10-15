@@ -35,7 +35,8 @@ Con todos los parámetros:
 ![image](https://user-images.githubusercontent.com/46584463/137561424-3724e306-9b6d-4b98-a4bc-75360d7a98e4.png)
 
 Sólo con la preferencia:
-![image](https://user-images.githubusercontent.com/46584463/137561841-8dd8c0dd-abbc-4357-8410-4f5d545445c3.png)
+![image](https://user-images.githubusercontent.com/46584463/137561993-67156df1-ce24-4e66-94bf-5bc650b036df.png)
+
 
 Sólo con la edad:
 ![image](https://user-images.githubusercontent.com/46584463/137561863-c0062237-1661-447a-9416-5cd915738e51.png)
