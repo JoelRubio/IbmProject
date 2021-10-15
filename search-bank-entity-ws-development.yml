@@ -1,5 +1,6 @@
 feignClient:
   api:
+    name: feignClient
     methodGET:
       hostname: https://www.banamex.com
       uri: /localizador/jsonP/json5.json
