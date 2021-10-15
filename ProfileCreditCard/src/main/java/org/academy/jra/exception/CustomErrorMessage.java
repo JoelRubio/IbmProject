@@ -18,7 +18,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Builder
-public class ErrorMessage {
+public class CustomErrorMessage {
 
 	private LocalDateTime timestamp;
 	private int status;

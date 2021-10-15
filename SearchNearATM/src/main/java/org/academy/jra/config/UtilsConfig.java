@@ -6,14 +6,6 @@ import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-/**
- * Clase de configuración
- * para la conversión de un tipo
- * de dato complejo.
- * 
- * @author joel
- *
- */
 @Configuration
 public class UtilsConfig {
 
@@ -28,5 +20,6 @@ public class UtilsConfig {
 			.setMatchingStrategy(MatchingStrategies.STRICT);
 			
 		return modelMapper;
+
 	}
 }

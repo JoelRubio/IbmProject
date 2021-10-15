@@ -1,15 +1,16 @@
 package org.academy.jra.controller;
 
-import java.math.BigDecimal;
 import java.util.Set;
+
+import javax.ws.rs.core.MediaType;
 
 import org.academy.jra.model.CreditCardDTO;
 import org.academy.jra.model.ProfileDTO;
 import org.academy.jra.service.ProfileService;
+import org.academy.jra.utils.ErrorMessage;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.annotations.ApiOperation;
@@ -17,8 +18,8 @@ import io.swagger.annotations.ApiOperation;
 
 /**
  * Clase que representa un controlador REST
- * que contiene métodos que mapearán los 
- * endpoints del servicio profile.
+ * el cual contiene métodos que mapearán los 
+ * endpoints del servicio Profile.
  * 
  * @author joel
  *
@@ -26,13 +27,11 @@ import io.swagger.annotations.ApiOperation;
 @RestController
 @RequestMapping("/profiles")
 public class ProfileController {
-
+	
 	private ProfileService profileService;
 	
 	/**
-	 * Se realiza inyección de dependencias por argumentos,
-	 * ya que no es necesario colocar @Autowired si sólo se tiene
-	 * un constructor.
+	 * Se realiza la inyección de dependencias por argumentos.
 	 * 
 	 * @param profileService
 	 */
@@ -55,12 +54,14 @@ public class ProfileController {
 	 */
 	@ApiOperation(value = "Obtiene el tipo de tarjeta de crédito de acuerdo a la preferencia,"
 			            + "el sueldo mensual, y la edad de la persona.")
-	@GetMapping
-	public ResponseEntity<Set<CreditCardDTO>> getCreditCardType(@RequestParam("passion") String passion,
-												                @RequestParam("monthlySalary") BigDecimal monthlySalary,
-												                @RequestParam("age") int age) {
+	@GetMapping(produces = MediaType.APPLICATION_JSON)
+	public ResponseEntity<Set<CreditCardDTO>> getCreditCardType(ProfileDTO profileDTO) {
 		
-		ProfileDTO profileDTO = new ProfileDTO(passion, monthlySalary, age);
+		//verifica que si todos los campos están vacíos.
+		if (profileDTO.isEmpty()) {
+			
+			throw new IllegalArgumentException(ErrorMessage.EMPTY_FIELDS);
+		}
 		
 		Set<CreditCardDTO> creditCards = profileService.getCreditCardType(profileDTO);
 		
