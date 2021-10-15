@@ -11,10 +11,3 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: create
-
-feign:
-  creditCard:
-    api:
-      name: CREDIT-CARD-WS
-      methodGET:
-        uri: /{id}
