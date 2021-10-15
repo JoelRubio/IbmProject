@@ -1,0 +1,5 @@
+feignClient:
+  api:
+    methodGET:
+      hostname: https://www.banamex.com
+      uri: /localizador/jsonP/json5.json
