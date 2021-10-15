@@ -35,14 +35,13 @@ Con todos los parámetros:
 ![image](https://user-images.githubusercontent.com/46584463/137561424-3724e306-9b6d-4b98-a4bc-75360d7a98e4.png)
 
 Sólo con la preferencia:
-![image](https://user-images.githubusercontent.com/46584463/137561476-ac45fe66-85d2-42be-b48f-85cf461c6a7e.png)
+![image](https://user-images.githubusercontent.com/46584463/137561841-8dd8c0dd-abbc-4357-8410-4f5d545445c3.png)
 
 Sólo con la edad:
-![image](https://user-images.githubusercontent.com/46584463/137561557-0e431219-6c68-4f93-bfd6-0f4d88ae4c49.png)
-
+![image](https://user-images.githubusercontent.com/46584463/137561863-c0062237-1661-447a-9416-5cd915738e51.png)
 
 Sólo con el salario mensual:
-![image](https://user-images.githubusercontent.com/46584463/137561592-b8302fb7-e42c-443f-b6a7-f4da1a86815e.png)
+![image](https://user-images.githubusercontent.com/46584463/137561893-e80c96cb-40dc-4d7d-9bc6-4619a0deffce.png)
 
 Con preferencia y salario mensual:
 ![image](https://user-images.githubusercontent.com/46584463/137561659-efed6c20-5da7-42d6-a90f-1b65bfd27fa3.png)
