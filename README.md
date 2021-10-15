@@ -86,9 +86,12 @@ Estos parámetros pueden ser opcionales pero al menos debe de haber un parámetr
 Con todos los parámetros:
 
 Sólo la latitud:
+![image](https://user-images.githubusercontent.com/46584463/137562389-5c2d6199-d391-4351-af74-c4e42d3548aa.png)
 
 
 Sólo la longitud:
+![image](https://user-images.githubusercontent.com/46584463/137562553-d53607ed-2664-4b31-ab40-ee48f6bdd7ea.png)
+
 
 Sólo el código postal:
 ![image](https://user-images.githubusercontent.com/46584463/137562308-ca043416-c16b-4d30-9d21-7fbc8d852010.png)
