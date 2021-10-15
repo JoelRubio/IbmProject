@@ -66,7 +66,7 @@ El microservicio se encarga de encontrar los cajeros automáticos y/o sucursales
 Los parámetros para el endpoint son los siguientes:
 
 - latitude (latitud, corresponde a GPS)
-- longitud (longitud, corresponde a GPS)
+- longitude (longitud, corresponde a GPS)
 - postalCode (código postal)
 - place (Delegación/Estado)
 
