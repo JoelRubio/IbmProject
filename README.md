@@ -20,7 +20,7 @@ Estos parámetros pueden ser opcionales pero al menos debe de haber un parámetr
 
 :bulb: El puerto se asigna de manera aleatoria en tiempo de ejecución.
 
-- http://localhost:{random-port}/profiles?passion=<value>&monthlySalary=<value>&age=<value>
+- http://localhost:{random-port}/profiles?passion=<\value\>&monthlySalary=<value>&age=<value>
 - http://localhost:{random-port}/profiles?passion=<value>&monthlySalary=<value>
 - http://localhost:{random-port}/profiles?passion=<value>&age=<value>
 - http://localhost:{random-port}/profiles?monthlySalary=<value>&age=<value>
