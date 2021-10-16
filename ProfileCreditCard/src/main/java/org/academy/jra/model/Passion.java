@@ -87,8 +87,11 @@ public class Passion {
 	}
 	
 	/**
+	 * Valida si está vacío el valor
+	 * de la preferencia del cliente.
 	 * 
-	 * @return
+	 * @return true si está vacío,
+	 * 		   false de lo contrario
 	 */
 	public boolean isEmpty() {
 		
@@ -110,12 +113,28 @@ public class Passion {
 			
 			return;
 		}
+
+		validateLength(passion);
 		
 		String tempPassion = removeUnderscoreIfExists(passion);
 		
 		validateLegalPassion(tempPassion);
 		
 		this.value = tempPassion.toLowerCase();
+	}
+	
+	/**
+	 * Verifica que la longitud de la preferencia
+	 * no sea mayor a MAX_LENGTH_PASSION.
+	 * 
+	 * @param passion preferencia del cliente
+	 */
+	public void validateLength(final String passion) {
+		
+		if (passion.length() > ValidationConstants.MAX_LENGTH_PASSION) {
+			
+			throw new IllegalArgumentException(ErrorMessage.PASSION_LENGTH);
+		}
 	}
 	
 	/**

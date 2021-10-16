@@ -17,6 +17,8 @@ public interface ValidationConstants {
 	BigDecimal MIN_MONTHLY_SALARY = new BigDecimal("15000.00");
 	BigDecimal MAX_MONTHLY_SALARY = new BigDecimal("999999999.99");
 	
+	int MAX_LENGTH_PASSION = 12;
+	
 	int INT_EMPTY_VALUE = 0;
 	
 	String EMPTY_VALUE = "";

@@ -17,6 +17,8 @@ public interface ErrorMessage {
 	String MAX_MONTHLY_SALARY    = "El salario mensual máximo es de 999999999.99 pesos mexicanos";
 	String MONTHLY_SALARY_DIGITS = "El salario mensual sólo puede tener dígitos";
 	
+	String PASSION_LENGTH = "La longitud máxima de caracteres es de " + ValidationConstants.MAX_LENGTH_PASSION;
+	
 	String ILEGAL_PASSION = "No existe ninguna preferencia con el valor proporcionado";
 	
 	String EMPTY_FIELDS = "No pueden estar vacíos todos los campos";
