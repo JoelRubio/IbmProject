@@ -34,26 +34,32 @@ Estos parámetros pueden ser opcionales pero al menos debe de haber un parámetr
 ### Capturas de pantalla sobre el resultado de los microservicios
 
 Con todos los parámetros:
-![image](https://user-images.githubusercontent.com/46584463/137561424-3724e306-9b6d-4b98-a4bc-75360d7a98e4.png)
+![image](https://user-images.githubusercontent.com/46584463/137598078-05de66c9-b29e-48b8-b00f-6cd4b7157ffc.png)
+
 
 Sólo con la preferencia:
-![image](https://user-images.githubusercontent.com/46584463/137561993-67156df1-ce24-4e66-94bf-5bc650b036df.png)
+![image](https://user-images.githubusercontent.com/46584463/137597888-6e7f853e-c177-474d-81f3-7182fc430b08.png)
 
 
 Sólo con la edad:
-![image](https://user-images.githubusercontent.com/46584463/137561863-c0062237-1661-447a-9416-5cd915738e51.png)
+![image](https://user-images.githubusercontent.com/46584463/137598028-ae21c2be-39db-4d6e-afe5-a5f14df9968c.png)
+
 
 Sólo con el salario mensual:
-![image](https://user-images.githubusercontent.com/46584463/137561893-e80c96cb-40dc-4d7d-9bc6-4619a0deffce.png)
+![image](https://user-images.githubusercontent.com/46584463/137598018-ecc2eefd-44ab-4518-879f-1b03c8e32f27.png)
+
 
 Con preferencia y salario mensual:
-![image](https://user-images.githubusercontent.com/46584463/137561659-efed6c20-5da7-42d6-a90f-1b65bfd27fa3.png)
+![image](https://user-images.githubusercontent.com/46584463/137598123-97bcdbae-c087-465d-a981-ee0d6588fbc2.png)
+
 
 Con preferencia y edad:
-![image](https://user-images.githubusercontent.com/46584463/137561701-be0071a0-b2d2-4c84-9c56-ea0dd4fe7a83.png)
+![image](https://user-images.githubusercontent.com/46584463/137598141-e985c64f-4b85-41c4-9615-fe660d70c08e.png)
+
 
 Con edad y salario mensual:
-![image](https://user-images.githubusercontent.com/46584463/137561728-68fb74f3-8c87-408f-b2a3-e0e8f05af08c.png)
+![image](https://user-images.githubusercontent.com/46584463/137598167-8de4dfe1-bd29-481e-babe-f56c24970faa.png)
+
 
 
 
