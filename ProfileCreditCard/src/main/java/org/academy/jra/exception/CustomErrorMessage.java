@@ -12,7 +12,7 @@ import lombok.Setter;
  * el cuerpo de la respuesta cuando
  * ocurra una excepción.
  * 
- * @author joel
+ * @author Joel Rubio
  *
  */
 @Getter

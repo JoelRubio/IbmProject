@@ -4,7 +4,7 @@ package org.academy.jra.utils;
  * Constantes para manejar los 
  * mensajes de error en la aplicación.
  * 
- * @author joel
+ * @author Joel Rubio
  *
  */
 public interface ErrorMessage {

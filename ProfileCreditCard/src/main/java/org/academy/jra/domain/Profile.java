@@ -14,6 +14,15 @@ import javax.persistence.ManyToMany;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * Clase que representa la entidad
+ * para el perfil del cliente al
+ * solicitar un tipo de tarjeta de
+ * crédito.
+ * 
+ * @author Joel Rubio
+ *
+ */
 @Getter
 @Setter
 @Entity

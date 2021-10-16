@@ -12,11 +12,10 @@ import org.springframework.stereotype.Repository;
 
 /**
  * Interfaz que representa el repositorio
- * del dominio Profile, extendiendo la interfaz
- * JpaRepository que permite obtener una implementación
- * por parte del framework.
+ * del dominio Profile y su relación con 
+ * CreditCard.
  * 
- * @author joel
+ * @author Joel Rubio
  *
  */
 @Repository
@@ -56,7 +55,7 @@ public interface ProfileRepository extends JpaRepository<Profile, Long> {
 	
 	
 	
-	//Regresa una lista de Profiles verificando preferencia y salario mensual.
+	//Regresa una lista de Profiles verificando preferencia y edad.
 	@Query(value = "SELECT * "
 		     + "FROM Profile "
 		     + "WHERE passion = :passion AND "

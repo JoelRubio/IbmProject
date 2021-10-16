@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * para la conversión de un tipo
  * de dato complejo.
  * 
- * @author joel
+ * @author Joel Rubio
  *
  */
 @Configuration

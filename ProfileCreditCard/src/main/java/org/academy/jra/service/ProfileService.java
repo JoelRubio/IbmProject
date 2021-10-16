@@ -9,7 +9,7 @@ import org.academy.jra.model.ProfileDTO;
  * Interfaz que define los métodos para
  * el servicio Profile.
  * 
- * @author joel
+ * @author Joel Rubio
  *
  */
 public interface ProfileService {

@@ -6,7 +6,7 @@ import java.math.BigDecimal;
  * Constantes para realizar la validación
  * de los campos de la aplicación.
  * 
- * @author joel
+ * @author Joel Rubio
  *
  */
 public interface ValidationConstants {
@@ -16,6 +16,8 @@ public interface ValidationConstants {
 	
 	BigDecimal MIN_MONTHLY_SALARY = new BigDecimal("15000.00");
 	BigDecimal MAX_MONTHLY_SALARY = new BigDecimal("999999999.99");
+	
+	int INT_EMPTY_VALUE = 0;
 	
 	String EMPTY_VALUE = "";
 	String UNDERSCORE  = "_";

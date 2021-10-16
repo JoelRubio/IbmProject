@@ -11,15 +11,12 @@ import lombok.Setter;
  * Clase que representa la edad
  * del cliente. 
  * 
- * @author joel
+ * @author Joel Rubio
  *
  */
 @Getter
 @Setter
 public class Age {
-
-	
-	
 	
 	private int value;
 	
@@ -36,7 +33,7 @@ public class Age {
 	 */
 	public boolean isEmpty() {
 		
-		return value == 0;
+		return value == ValidationConstants.INT_EMPTY_VALUE;
 	}
 	
 	/**
@@ -52,7 +49,7 @@ public class Age {
 		//estar en 0
 		if (age == null) {
 			
-			this.value = 0;
+			this.value = ValidationConstants.INT_EMPTY_VALUE;
 			
 			return;
 		}

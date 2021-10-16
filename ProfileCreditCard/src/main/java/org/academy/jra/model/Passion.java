@@ -10,7 +10,7 @@ import lombok.Setter;
  * Clase que representa la
  * preferencia de la persona.
  * 
- * @author joel
+ * @author Joel Rubio
  *
  */
 @Getter
@@ -22,7 +22,7 @@ public class Passion {
 	 * correctos para la preferencia de la
 	 * persona.
 	 * 
-	 * @author joel
+	 * @author Joel Rubio
 	 *
 	 */
 	enum LegalPassion {

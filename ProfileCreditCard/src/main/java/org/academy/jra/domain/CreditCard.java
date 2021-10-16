@@ -13,6 +13,13 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * Clase que representa la entidad
+ * para el tipo tarjeta de crédito.
+ * 
+ * @author Joel Rubio
+ *
+ */
 @Getter
 @Setter
 @Entity

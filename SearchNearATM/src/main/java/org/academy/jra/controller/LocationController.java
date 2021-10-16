@@ -23,11 +23,11 @@ import io.swagger.annotations.ApiOperation;
  * Clase que representa el controlador REST
  * para el cajero automático o sucursal.
  * 
- * @author joel
+ * @author Joel Rubio
  *
  */
 @RestController
-@RequestMapping("/locations")
+@RequestMapping("${ws.api.uri}")
 public class LocationController {
 
 	

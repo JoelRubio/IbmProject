@@ -21,7 +21,7 @@ import io.swagger.annotations.ApiOperation;
  * el cual contiene métodos que mapearán los 
  * endpoints del servicio Profile.
  * 
- * @author joel
+ * @author Joel Rubio
  *
  */
 @RestController

@@ -4,9 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * Clase que representa los valores
- * que ingresa el cliente para obtener
- * un tipo de tarjeta de crédito.
+ * Clase que representa el DTO
+ * del perfil del cliente.
  * 
  * @author joel
  *

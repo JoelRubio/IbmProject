@@ -13,7 +13,7 @@ import lombok.Setter;
  * Clase que representa el salario
  * mensual del cliente.
  * 
- * @author joel
+ * @author Joel Rubio
  *
  */
 @Getter
@@ -28,7 +28,8 @@ public class MonthlySalary {
 	}
 	
 	/**
-	 * Verifica si está vacío el salario mensual
+	 * Verifica si salario mensual está vacío, 
+	 * es decir, tiene un cero como valor.
 	 * 
 	 * @return true si el salario mensual es cero,
 	 * 		   false de lo contrario

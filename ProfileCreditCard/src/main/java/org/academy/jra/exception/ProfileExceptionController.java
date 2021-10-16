@@ -15,7 +15,7 @@ import org.springframework.web.context.request.WebRequest;
  * Clase que representa un controlador global
  * para manejar las excepciones de la aplicación.
  * 
- * @author joel
+ * @author Joel Rubio
  *
  */
 @ControllerAdvice

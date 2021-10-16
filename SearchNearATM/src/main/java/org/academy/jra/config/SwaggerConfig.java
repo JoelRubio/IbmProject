@@ -8,6 +8,13 @@ import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
+/**
+ * Clase de configuración para la
+ * documentación con Swagger.
+ * 
+ * @author Joel Rubio
+ *
+ */
 @Configuration
 public class SwaggerConfig {
 

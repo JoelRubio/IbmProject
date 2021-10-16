@@ -13,7 +13,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * Clase de configuración para la
  * documentación con Swagger.
  * 
- * @author joel
+ * @author Joel Rubio
  *
  */
 @Configuration
