@@ -1,11 +1,11 @@
-# IbmProject
+# IBM Project
 Repositorio que contiene dos microservicios principales para el proyecto de IBM.
 
-## Descripción del primer microservicio.
+## Descripción microservicio tipo de tarjetas de crédito.
 
 ### ¿Qué realiza el microservicio?
 
-El microservicio se encarga de encontrar el tipo de tarjeta de crédito acorde a las características del cliente.
+El primer microservicio se encarga de encontrar el tipo de tarjeta de crédito acorde a las características del cliente.
 
 Los parámetros para el endpoint son los siguientes:
 
@@ -18,17 +18,15 @@ Estos parámetros pueden ser opcionales pero al menos debe de haber un parámetr
 
 ### Endpoints
 
-:bulb: El puerto se asigna de manera aleatoria en tiempo de ejecución.
-
 :bulb: El orden de los parámetros no importa.
 
-- http://localhost:{random-port}/profiles?passion=<value\>&monthlySalary=<value\>&age=<value\>
-- http://localhost:{random-port}/profiles?passion=<value\>&monthlySalary=<value\>
-- http://localhost:{random-port}/profiles?passion=<value\>&age=<value\>
-- http://localhost:{random-port}/profiles?monthlySalary=<value\>&age=<value\>
-- http://localhost:{random-port}/profiles?passion=<value\>
-- http://localhost:{random-port}/profiles?monthlySalary=<value\>
-- http://localhost:{random-port}/profiles?age=<value\>
+- http://localhost:8089/profile-credit-card-ws/search?passion=<value\>&monthlySalary=<value\>&age=<value\>
+- http://localhost:8089/profile-credit-card-ws/search?passion=<value\>&monthlySalary=<value\>
+- http://localhost:8089/profile-credit-card-ws/search?passion=<value\>&age=<value\>
+- http://localhost:8089/profile-credit-card-ws/search?monthlySalary=<value\>&age=<value\>
+- http://localhost:8089/profile-credit-card-ws/search?passion=<value\>
+- http://localhost:8089/profile-credit-card-ws/search?monthlySalary=<value\>
+- http://localhost:8089/profile-credit-card-ws/search?age=<value\>
   
 
 ### Capturas de pantalla sobre el resultado de los microservicios
@@ -82,12 +80,11 @@ Estos parámetros pueden ser opcionales pero al menos debe de haber un parámetr
 
 :bulb: El puerto se asigna de manera aleatoria en tiempo de ejecución.
   
-- http://localhost:{random-port}/locations?latitude=<value\>&longitude=<value\>&postalCode=<value\>&place=<value\>
-  
-- http://localhost:{random-port}/locations?latitude=<value\>
-- http://localhost:{random-port}/locations?longitude=<value\>
-- http://localhost:{random-port}/locations?postalCode=<value\>
-- http://localhost:{random-port}/locations?place=<value\>
+- http://localhost:8089/bank-entity-ws/search?latitude=<value\>&longitude=<value\>&postalCode=<value\>&place=<value\>
+- http://localhost:8089/bank-entity-ws/search?latitude=<value\>
+- http://localhost:8089/bank-entity-ws/search?longitude=<value\>
+- http://localhost:8089/bank-entity-ws/search?postalCode=<value\>
+- http://localhost:8089/bank-entity-ws/search?place=<value\>
 
 ### Capturas de pantalla sobre el resultado de los microservicios
 
