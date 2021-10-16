@@ -10,12 +10,12 @@ import javax.annotation.PostConstruct;
 import javax.persistence.EntityNotFoundException;
 
 import org.academy.jra.client.BanamexFeignClient;
-import org.academy.jra.domain.Latitude;
-import org.academy.jra.domain.Location;
-import org.academy.jra.domain.Longitude;
-import org.academy.jra.domain.Place;
-import org.academy.jra.domain.PostalCode;
-import org.academy.jra.model.BankEntityDTO;
+import org.academy.jra.dto.BankEntityDTO;
+import org.academy.jra.model.Latitude;
+import org.academy.jra.model.LocationModel;
+import org.academy.jra.model.Longitude;
+import org.academy.jra.model.Place;
+import org.academy.jra.model.PostalCode;
 import org.academy.jra.utils.ErrorMessage;
 import org.academy.jra.utils.ValidationConstants;
 import org.json.JSONArray;
@@ -124,7 +124,7 @@ public class LocationServiceImpl implements LocationService {
 	 */
 	@Cacheable("bank-entities-location")
 	@Override
-	public Set<BankEntityDTO> getBankEntitiesLocations(Location location) {
+	public Set<BankEntityDTO> getBankEntitiesLocations(LocationModel location) {
 		
 		Set<BankEntityDTO> locations = new HashSet<>();
 		
@@ -147,7 +147,7 @@ public class LocationServiceImpl implements LocationService {
 	 * @param location  locación para encontrar un ATM o una sucursal
 	 * @param locations locaciones encontradas de ATMs o una sucursal
 	 */
-	private void readJson(Location location, Set<BankEntityDTO> locations) {
+	private void readJson(LocationModel location, Set<BankEntityDTO> locations) {
 		
 		try {
 	
@@ -180,7 +180,7 @@ public class LocationServiceImpl implements LocationService {
 	 * @param location   locación para encontrar un ATM o una sucursal
 	 * @param locations  locaciones encontradas de ATMs o una sucursal
 	 */
-	private void readLines(JSONObject jsonObject, Location location, Set<BankEntityDTO> locations) {
+	private void readLines(JSONObject jsonObject, LocationModel location, Set<BankEntityDTO> locations) {
 		
 		Iterator<String> firstLevelKeys  = jsonObject.keys();
 		Iterator<String> secondLevelKeys = null;
@@ -227,7 +227,7 @@ public class LocationServiceImpl implements LocationService {
 	 * @param location  locación para encontrar un ATM o una sucursal
 	 * @param locations locaciones encontradas de ATMs o una sucursal
 	 */
-	private void setValuesOfArray(JSONArray jsonArray, Location location, Set<BankEntityDTO> locations) {
+	private void setValuesOfArray(JSONArray jsonArray, LocationModel location, Set<BankEntityDTO> locations) {
 		
 		//si no es un cajero automático o una sucursal regresa el control
 		if (!validationService.verifyTypeOfPlace(jsonArray.getString(ValidationConstants.POSITION_FOR_TYPE_OF_PLACE))) {
@@ -242,7 +242,9 @@ public class LocationServiceImpl implements LocationService {
 	
 	/**
 	 * Valida que los campos del cliente concuerden con los
-	 * del arreglo.
+	 * del arreglo, si coinciden se creará un opcional de la instancia de
+	 * BankEntityDTO, de lo contrario, regresará un opcional vacío.
+	 * 
 	 * 
 	 * @param jsonArray arreglo que contiene los valores de la ubicación
 	 * 				    de una entidad bancaria
@@ -250,7 +252,7 @@ public class LocationServiceImpl implements LocationService {
 	 * 
 	 * @return opcional sobre una entidad bancaria
 	 */
-	private Optional<BankEntityDTO> getValidatedBankEntity(JSONArray jsonArray, Location location) {
+	private Optional<BankEntityDTO> getValidatedBankEntity(JSONArray jsonArray, LocationModel location) {
 		
 		final String LATITUDE  = jsonArray.getString(ValidationConstants.POSITION_FOR_LATITUDE);
 		final String LONGITUDE = jsonArray.getString(ValidationConstants.POSITION_FOR_LONGITUDE);

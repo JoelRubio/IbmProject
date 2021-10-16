@@ -4,12 +4,10 @@ import java.util.Set;
 
 import javax.ws.rs.core.MediaType;
 
-import org.academy.jra.domain.GPS;
-import org.academy.jra.domain.Location;
-import org.academy.jra.domain.Place;
-import org.academy.jra.domain.PostalCode;
-import org.academy.jra.model.BankEntityDTO;
-import org.academy.jra.model.LocationDTO;
+import org.academy.jra.LocationFactory;
+import org.academy.jra.dto.BankEntityDTO;
+import org.academy.jra.dto.LocationDTO;
+import org.academy.jra.model.LocationModel;
 import org.academy.jra.service.LocationService;
 import org.academy.jra.utils.ErrorMessage;
 import org.springframework.http.ResponseEntity;
@@ -60,11 +58,9 @@ public class LocationController {
 		}
 		
 		
-		Location location = new Location(new GPS(locationDTO.getLatitude(), locationDTO.getLongitude()),
-										 new PostalCode(locationDTO.getPostalCode()),
-										 new Place(locationDTO.getPlace()));
+		LocationModel locationModel = LocationFactory.createLocationModel(locationDTO);
 		
-		Set<BankEntityDTO> locationResponse = locationService.getBankEntitiesLocations(location);
+		Set<BankEntityDTO> locationResponse = locationService.getBankEntitiesLocations(locationModel);
 		
 		return ResponseEntity.ok(locationResponse);
 	}

@@ -1,4 +1,4 @@
-package org.academy.jra.domain;
+package org.academy.jra.model;
 
 import org.academy.jra.utils.ErrorMessage;
 import org.academy.jra.utils.ValidationConstants;

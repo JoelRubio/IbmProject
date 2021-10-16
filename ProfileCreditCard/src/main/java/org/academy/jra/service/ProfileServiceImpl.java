@@ -9,8 +9,8 @@ import javax.persistence.EntityNotFoundException;
 
 import org.academy.jra.domain.CreditCard;
 import org.academy.jra.domain.Profile;
-import org.academy.jra.model.CreditCardDTO;
-import org.academy.jra.model.ProfileDTO;
+import org.academy.jra.dto.CreditCardDTO;
+import org.academy.jra.model.ProfileModel;
 import org.academy.jra.repository.ProfileRepository;
 import org.academy.jra.utils.ErrorMessage;
 import org.modelmapper.ModelMapper;
@@ -53,58 +53,59 @@ public class ProfileServiceImpl implements ProfileService {
 	 * Además almacena en cache los valores para una 
 	 * rápida obtención de ellos en un futuro.
 	 * 
-	 * @param profileDTO perfil del cliente
+	 * @param profileModel perfil del cliente
 	 * 
-	 * @return               tipo de tarjeta de crédito de acuerdo los parámetros del cliente
+	 * @return tipo de tarjeta de crédito de acuerdo los parámetros del cliente
 	 */
 	@Cacheable("credit-cards")
 	@Override
-	public Set<CreditCardDTO> getCreditCardType(ProfileDTO profileDTO) {
+	public Set<CreditCardDTO> getCreditCardType(ProfileModel profileModel) {
+
 		
 		//Si el cliente proporcionó todos los parámetros
-		if (profileDTO.containsAll()) {
+		if (profileModel.containsAll()) {
 			
-			return getAll(profileDTO);
+			return getAll(profileModel);
 		}
 		
 		//Si el cliente propocionó la preferencia y el salario mensual
-		if (!profileDTO.getPassion().getValue().isEmpty() && 
-			!profileDTO.getMonthlySalary().isEmpty()) {
+		if (!profileModel.getPassion().getValue().isEmpty() && 
+			!profileModel.getMonthlySalary().isEmpty()) {
 			
-			return getByPassionAndMonthlySalary(profileDTO);
+			return getByPassionAndMonthlySalary(profileModel);
 		}
 		
 		
 		//Si el cliente propocionó la preferencia y la edad
-		if (!profileDTO.getPassion().getValue().isEmpty() && 
-			!profileDTO.getAge().isEmpty()) {
+		if (!profileModel.getPassion().getValue().isEmpty() && 
+			!profileModel.getAge().isEmpty()) {
 				
-			return getByPassionAndAge(profileDTO);
+			return getByPassionAndAge(profileModel);
 		}
 		
 		//Si el cliente propocionó el salario mensual y la edad
-		if (!profileDTO.getMonthlySalary().isEmpty() && 
-			!profileDTO.getAge().isEmpty()) {
+		if (!profileModel.getMonthlySalary().isEmpty() && 
+			!profileModel.getAge().isEmpty()) {
 					
-			return getByMonthlySalaryAndAge(profileDTO);
+			return getByMonthlySalaryAndAge(profileModel);
 		}
 		
 		//Si el cliente sólo propocionó la preferencia
-		if (!profileDTO.getPassion().getValue().isEmpty()) {
+		if (!profileModel.getPassion().getValue().isEmpty()) {
 			
-			return getByPassion(profileDTO);
+			return getByPassion(profileModel);
 		}
 		
 		//Si el cliente sólo propocionó el salario mensual
-		if (!profileDTO.getMonthlySalary().isEmpty()) {
+		if (!profileModel.getMonthlySalary().isEmpty()) {
 			
-			return getByMonthlySalary(profileDTO);
+			return getByMonthlySalary(profileModel);
 		}
 		
 		//Si el cliente sólo propocionó la edad
-		if (!profileDTO.getAge().isEmpty()) {
+		if (!profileModel.getAge().isEmpty()) {
 			
-			return getByAge(profileDTO);			
+			return getByAge(profileModel);			
 		}
 		
 		//si no encontró ningún perfil, regrese un conjunto vacío
@@ -116,16 +117,16 @@ public class ProfileServiceImpl implements ProfileService {
 	 * de acuerdo a la preferencia y salario mensual 
 	 * del cliente.
 	 * 
-	 * @param profileDTO perfil del cliente
+	 * @param profileModel perfil del cliente
 	 * 
 	 * @return conjunto con el tipo de tarjetas de crédito
 	 */
-	private Set<CreditCardDTO> getByPassionAndMonthlySalary(ProfileDTO profileDTO) {
+	private Set<CreditCardDTO> getByPassionAndMonthlySalary(ProfileModel profileModel) {
 		
 		log.info("Getting profile's data by passion and monthly salary...");
 		
-		List<Profile> profiles = profileRepository.findByPassionAndMonthlySalary(profileDTO.getPassion().getValue(),
-																				 profileDTO.getMonthlySalary().getValue());
+		List<Profile> profiles = profileRepository.findByPassionAndMonthlySalary(profileModel.getPassion().getValue(),
+																				 profileModel.getMonthlySalary().getValue());
 		
 		if (profiles.isEmpty()) {
 			
@@ -139,16 +140,16 @@ public class ProfileServiceImpl implements ProfileService {
 	 * Busca los tipos de tarjeta de crédito
 	 * de acuerdo a la preferencia y edad del cliente.
 	 * 
-	 * @param profileDTO perfil del cliente
+	 * @param profileModel perfil del cliente
 	 * 
 	 * @return conjunto con el tipo de tarjetas de crédito
 	 */
-	private Set<CreditCardDTO> getByPassionAndAge(ProfileDTO profileDTO) {
+	private Set<CreditCardDTO> getByPassionAndAge(ProfileModel profileModel) {
 		
 		log.info("Getting profile's data by passion and age...");
 		
-		List<Profile> profiles = profileRepository.findByPassionAndAge(profileDTO.getPassion().getValue(),
-																	   profileDTO.getAge().getValue());
+		List<Profile> profiles = profileRepository.findByPassionAndAge(profileModel.getPassion().getValue(),
+																	   profileModel.getAge().getValue());
 		
 		if (profiles.isEmpty()) {
 			
@@ -163,16 +164,16 @@ public class ProfileServiceImpl implements ProfileService {
 	 * Busca los tipos de tarjeta de crédito
 	 * de acuerdo al salario mensual y la edad del cliente.
 	 * 
-	 * @param profileDTO perfil del cliente
+	 * @param profileModel perfil del cliente
 	 * 
 	 * @return conjunto con el tipo de tarjetas de crédito
 	 */
-	private Set<CreditCardDTO> getByMonthlySalaryAndAge(ProfileDTO profileDTO) {
+	private Set<CreditCardDTO> getByMonthlySalaryAndAge(ProfileModel profileModel) {
 		
 		log.info("Getting profile's data by monthly salary and age...");
 		
-		List<Profile> profiles = profileRepository.findByMonthlySalaryAndAge(profileDTO.getMonthlySalary().getValue(),
-																	         profileDTO.getAge().getValue());
+		List<Profile> profiles = profileRepository.findByMonthlySalaryAndAge(profileModel.getMonthlySalary().getValue(),
+																			 profileModel.getAge().getValue());
 		
 		if (profiles.isEmpty()) {
 			
@@ -187,15 +188,15 @@ public class ProfileServiceImpl implements ProfileService {
 	 * Busca los tipos de tarjeta de crédito
 	 * de acuerdo a la preferencia del cliente.
 	 * 
-	 * @param profileDTO perfil del cliente
+	 * @param profileModel perfil del cliente
 	 * 
 	 * @return conjunto con el tipo de tarjetas de crédito
 	 */
-	private Set<CreditCardDTO> getByPassion(ProfileDTO profileDTO) {
+	private Set<CreditCardDTO> getByPassion(ProfileModel profileModel) {
 		
 		log.info("Getting profile's data by passion...");
 		
-		List<Profile> profiles = profileRepository.findByPassion(profileDTO.getPassion().getValue());
+		List<Profile> profiles = profileRepository.findByPassion(profileModel.getPassion().getValue());
 		
 		if (profiles.isEmpty()) {
 			
@@ -209,15 +210,15 @@ public class ProfileServiceImpl implements ProfileService {
 	 * Busca los tipos de tarjeta de crédito
 	 * de acuerdo a la edad del cliente.
 	 * 
-	 * @param profileDTO perfil del cliente
+	 * @param profileModel perfil del cliente
 	 * 
 	 * @return conjunto con el tipo de tarjetas de crédito
 	 */
-	private Set<CreditCardDTO> getByAge(ProfileDTO profileDTO) {
+	private Set<CreditCardDTO> getByAge(ProfileModel profileModel) {
 		
 		log.info("Getting profile's data by age...");
 		
-		List<Profile> profiles = profileRepository.findByAge(profileDTO.getAge().getValue());
+		List<Profile> profiles = profileRepository.findByAge(profileModel.getAge().getValue());
 		
 		if (profiles.isEmpty()) {
 			
@@ -231,15 +232,15 @@ public class ProfileServiceImpl implements ProfileService {
 	 * Busca los tipos de tarjeta de crédito
 	 * de acuerdo al salario mensual del cliente.
 	 * 
-	 * @param profileDTO perfil del cliente
+	 * @param profileModel perfil del cliente
 	 * 
 	 * @return conjunto con el tipo de tarjetas de crédito
 	 */
-	private Set<CreditCardDTO> getByMonthlySalary(ProfileDTO profileDTO) {
+	private Set<CreditCardDTO> getByMonthlySalary(ProfileModel profileModel) {
 		
 		log.info("Getting profile's data by monthly salary...");
 		
-		List<Profile> profiles = profileRepository.findByMonthlySalary(profileDTO.getMonthlySalary().getValue());
+		List<Profile> profiles = profileRepository.findByMonthlySalary(profileModel.getMonthlySalary().getValue());
 		
 		if (profiles.isEmpty()) {
 			
@@ -273,17 +274,17 @@ public class ProfileServiceImpl implements ProfileService {
 	 * de acuerdo a la preferencia, salario mensual,
 	 * y edad del cliente.
 	 * 
-	 * @param profileDTO perfil del cliente
+	 * @param profileModel perfil del cliente
 	 * 
 	 * @return conjunto con el tipo de tarjetas de crédito
 	 */
-	private Set<CreditCardDTO> getAll(ProfileDTO profileDTO) {
+	private Set<CreditCardDTO> getAll(ProfileModel profileModel) {
 		
 		log.info("Getting profile's data by passion, monthly salary, and age...");
 		
-		Profile profile = profileRepository.findByPassionAndMonthlySalaryAndAge(profileDTO.getPassion().getValue(), 
-																		        profileDTO.getMonthlySalary().getValue(), 
-																		        profileDTO.getAge().getValue())
+		Profile profile = profileRepository.findByPassionAndMonthlySalaryAndAge(profileModel.getPassion().getValue(), 
+																				profileModel.getMonthlySalary().getValue(), 
+																		        profileModel.getAge().getValue())
 				.orElseThrow(() -> new EntityNotFoundException(ErrorMessage.ENTITY_NOT_FOUND));
 		
 		//Convierte el tipo de dato

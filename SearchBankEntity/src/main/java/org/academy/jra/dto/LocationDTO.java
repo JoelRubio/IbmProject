@@ -1,7 +1,8 @@
-package org.academy.jra.model;
+package org.academy.jra.dto;
 
 import java.io.Serializable;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,6 +16,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
+@AllArgsConstructor
 public class LocationDTO implements Serializable {
 
 	private static final long serialVersionUID = 4729459867929804569L;

@@ -1,4 +1,4 @@
-package org.academy.jra.model;
+package org.academy.jra.dto;
 
 import java.io.Serializable;
 

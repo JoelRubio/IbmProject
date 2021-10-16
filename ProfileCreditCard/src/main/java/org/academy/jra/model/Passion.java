@@ -87,6 +87,15 @@ public class Passion {
 	}
 	
 	/**
+	 * 
+	 * @return
+	 */
+	public boolean isEmpty() {
+		
+		return ValidationConstants.EMPTY_VALUE.equals(value);
+	}
+	
+	/**
 	 * Realiza las validaciones correspondientes
 	 * para la validación de la preferencia de la
 	 * persona.

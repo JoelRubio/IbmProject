@@ -1,4 +1,4 @@
-package org.academy.jra.domain;
+package org.academy.jra.model;
 
 import lombok.Getter;
 import lombok.Setter;

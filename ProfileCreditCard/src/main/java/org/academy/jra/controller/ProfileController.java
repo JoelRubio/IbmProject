@@ -4,8 +4,10 @@ import java.util.Set;
 
 import javax.ws.rs.core.MediaType;
 
-import org.academy.jra.model.CreditCardDTO;
-import org.academy.jra.model.ProfileDTO;
+import org.academy.jra.dto.CreditCardDTO;
+import org.academy.jra.dto.ProfileDTO;
+import org.academy.jra.factory.ProfileFactory;
+import org.academy.jra.model.ProfileModel;
 import org.academy.jra.service.ProfileService;
 import org.academy.jra.utils.ErrorMessage;
 import org.springframework.http.ResponseEntity;
@@ -62,7 +64,9 @@ public class ProfileController {
 			throw new IllegalArgumentException(ErrorMessage.EMPTY_FIELDS);
 		}
 		
-		Set<CreditCardDTO> creditCards = profileService.getCreditCardType(profileDTO);
+		ProfileModel profileModel = ProfileFactory.createProfileModel(profileDTO);
+		
+		Set<CreditCardDTO> creditCards = profileService.getCreditCardType(profileModel);
 		
 		return ResponseEntity.ok(creditCards);
 	}

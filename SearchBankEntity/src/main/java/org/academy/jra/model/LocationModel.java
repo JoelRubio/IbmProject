@@ -1,4 +1,4 @@
-package org.academy.jra.domain;
+package org.academy.jra.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,14 +16,14 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class Location {
+public class LocationModel {
 	
 	private GPS gps;
 	private PostalCode postalCode;
 	private Place place;
 	private List<Object> listObjects;
 	
-	public Location(GPS gps, PostalCode postalCode, Place place) {
+	public LocationModel(GPS gps, PostalCode postalCode, Place place) {
 				
 		this.gps        = gps;
 		this.postalCode = postalCode;

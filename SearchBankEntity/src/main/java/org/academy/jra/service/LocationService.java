@@ -2,8 +2,8 @@ package org.academy.jra.service;
 
 import java.util.Set;
 
-import org.academy.jra.domain.Location;
-import org.academy.jra.model.BankEntityDTO;
+import org.academy.jra.dto.BankEntityDTO;
+import org.academy.jra.model.LocationModel;
 
 /**
  * Interfaz que representa los
@@ -15,5 +15,5 @@ import org.academy.jra.model.BankEntityDTO;
  */
 public interface LocationService {
 
-	Set<BankEntityDTO> getBankEntitiesLocations(Location location);
+	Set<BankEntityDTO> getBankEntitiesLocations(LocationModel location);
 }

@@ -2,9 +2,9 @@ package org.academy.jra.service;
 
 import java.math.BigDecimal;
 
-import org.academy.jra.domain.Latitude;
-import org.academy.jra.domain.Longitude;
 import org.academy.jra.model.BankEntityPlace;
+import org.academy.jra.model.Latitude;
+import org.academy.jra.model.Longitude;
 import org.academy.jra.utils.GPSUtils;
 import org.springframework.stereotype.Service;
 
