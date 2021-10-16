@@ -11,7 +11,7 @@ import lombok.Setter;
  * Clase que representa el
  * código postal de una dirección.
  * 
- * @author joel
+ * @author Joel Rubio
  *
  */
 @Getter

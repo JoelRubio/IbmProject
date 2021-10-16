@@ -13,10 +13,10 @@ import org.springframework.web.context.request.WebRequest;
 
 /**
  * Clase que representa un controlador global
- * para el maneja de excepciones lanzadas
- * por el programa.
+ * para el manejar de excepciones lanzadas
+ * por la aplicación.
  * 
- * @author joel
+ * @author Joel Rubio
  *
  */
 @ControllerAdvice

@@ -6,6 +6,13 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * Clase que representa un
+ * mensaje de error personalizado.
+ * 
+ * @author Joel Rubio
+ *
+ */
 @Getter
 @Setter
 @Builder

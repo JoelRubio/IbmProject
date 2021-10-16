@@ -12,7 +12,7 @@ import lombok.Setter;
  * Clase que representa las
  * coordenadas para el GPS.
  * 
- * @author joel
+ * @author Joel Rubio
  *
  */
 @Getter
@@ -28,9 +28,22 @@ public class GPS {
 		validateLongitude(longitude);
 	}
 	
+	
+	public boolean isLatitudeEmpty() {
+		
+		return ValidationConstants.DEFAULT_VALUE.equals(latitude);
+	}
+	
+	public boolean isLongitudeEmpty() {
+		
+		return ValidationConstants.DEFAULT_VALUE.equals(longitude);
+	}
+	
 	/**
+	 * Obtiene la representación en cadena
+	 * de la latitud.
 	 * 
-	 * @return
+	 * @return latitud en String
 	 */
 	public String latitudeToString() {
 		
@@ -38,8 +51,10 @@ public class GPS {
 	}
 	
 	/**
+	 * Obtiene la representación en cadena
+	 * de la longitud.
 	 * 
-	 * @return
+	 * @return longitud en String
 	 */
 	public String longitudeToString() {
 		
@@ -48,7 +63,7 @@ public class GPS {
 	
 	
 	/**
-	 * Verifica si los valores de GPS contiene valor por defecto,
+	 * Verifica si los valores de GPS contiene valores por defecto,
 	 * es decir, que no se les asigno un valor. 
 	 * 
 	 * @return true si contienen valores por defecto,

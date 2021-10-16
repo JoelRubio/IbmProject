@@ -29,14 +29,14 @@ import io.swagger.annotations.ApiOperation;
 @RestController
 @RequestMapping("${ws.api.uri}")
 public class LocationController {
-
-	
 	
 	private LocationService locationService;
 	
 	/**
+	 * Inyección de dependencias por argumentos.
 	 * 
-	 * @param atmService
+	 * @param atmService servicio que contiene la lógica
+	 * 			         para la locación de un ATM o sucursal
 	 */
 	public LocationController(LocationService locationService) {
 		

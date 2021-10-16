@@ -10,3 +10,7 @@ spring:
     active: development 
   config:
     import: configserver:http://localhost:8888 #URL para localizar el config server.
+
+ws:
+  api:
+    uri: /profiles

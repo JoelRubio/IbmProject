@@ -25,21 +25,21 @@ import io.swagger.annotations.ApiOperation;
  *
  */
 @RestController
-@RequestMapping("/profiles")
+@RequestMapping("${ws.api.uri}")
 public class ProfileController {
 	
 	private ProfileService profileService;
 	
 	/**
-	 * Se realiza la inyección de dependencias por argumentos.
+	 * Inyección de dependencias por argumentos.
 	 * 
-	 * @param profileService
+	 * @param profileService servicio que contiene la lógica para
+	 * 				         encontrar tipos de tarjetas de crédito
 	 */
 	public ProfileController(ProfileService profileService) {
 		
 		this.profileService = profileService;
 	}
-	
 	
 	/**
 	 * Método que manejára la petición del cliente
@@ -47,10 +47,9 @@ public class ProfileController {
 	 * crédito acorde a sus parámetros.
 	 * 
 	 * 
-	 * @param passion       preferencia del cliente
-	 * @param monthlySalary salario mensual del ciente
-	 * @param age           edad del cliente 
-	 * @return              tarjeta de crédito de acuerdo a sus parámetros
+	 * @param profileDTO parámetros del ciente
+	 * 
+	 * @return  conjunto de tipos de tarjeta de crédito de acuerdo a los parámetros del cliente
 	 */
 	@ApiOperation(value = "Obtiene el tipo de tarjeta de crédito de acuerdo a la preferencia,"
 			            + "el sueldo mensual, y la edad de la persona.")

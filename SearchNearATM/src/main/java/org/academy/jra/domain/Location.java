@@ -10,7 +10,7 @@ import lombok.Setter;
  * del cajero automático o sucursal
  * a buscar.
  * 
- * @author joel
+ * @author Joel Rubio
  *
  */
 @Getter

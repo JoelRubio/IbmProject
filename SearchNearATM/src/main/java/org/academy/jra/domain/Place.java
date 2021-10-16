@@ -7,11 +7,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * Clase que representa el lugar
- * a buscar del cajero automático
+ * Clase que representa la Delegación
+ * o Estado a buscar del cajero automático
  * o sucursal.
  * 
- * @author joel
+ * @author Joel Rubio
  *
  */
 @Getter

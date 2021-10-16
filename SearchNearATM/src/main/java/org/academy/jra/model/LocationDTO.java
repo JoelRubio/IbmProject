@@ -6,11 +6,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * Clase que representa los valores
+ * Clase que representa un DTO
  * de la locación del cajero automático
  * o sucursal a buscar.
  * 
- * @author joel
+ * @author Joel Rubio
  *
  */
 @Getter

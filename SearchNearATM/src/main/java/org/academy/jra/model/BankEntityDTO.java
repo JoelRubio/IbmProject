@@ -9,7 +9,7 @@ import lombok.Data;
  * locación del cajero automático
  * o sucursal encontrado.
  * 
- * @author joel
+ * @author Joel Rubio
  *
  */
 @Data

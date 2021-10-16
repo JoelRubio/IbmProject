@@ -1,11 +1,11 @@
 package org.academy.jra.model;
 
 /**
- * Enumeración que contiene
+ * Enumeración que representa
  * los lugares bancarios a 
  * ser buscados en el programa.
  * 
- * @author joel
+ * @author Joel Rubio
  *
  */
 public enum BankEntityPlace {
