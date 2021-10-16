@@ -1,0 +1,27 @@
+server:
+  port: 8089
+  
+spring:
+  application:
+    name: api-gateway
+  config:
+    import: configserver:http://localhost:8888
+  cloud:
+    gateway:
+      routes:
+      - id: profile-credit-card
+        uri: lb://profile-credit-card-ws #lb es la uri para el balanceo de carga que usa Spring Cloud Gateway para los microservicios
+        predicates:
+        - Path=/profile-credit-card-ws/search #especifica la ruta a ser usada
+        - Method=GET #especifica el método HTTP hacia la uri
+        filters:
+        - RewritePath=/profile-credit-card-ws/(?<segment>.*), /$\{segment} #reescribe la ruta para hacer la petición hacia el microservicio de manera correcta
+      - id: bank-entity
+        uri: lb://bank-entity-ws
+        predicates:
+        - Path=/bank-entity-ws/search
+        - Method=GET
+        filters:
+        - RewritePath=/bank-entity-ws/(?<segment>.*), /$\{segment}
+        
+        

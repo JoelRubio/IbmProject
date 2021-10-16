@@ -13,4 +13,4 @@ spring:
 
 ws:
   api:
-    uri: /profiles
+    uri: /search
