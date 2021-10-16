@@ -1,19 +1,24 @@
 # IBM Project
 Repositorio que contiene dos microservicios principales para el proyecto de IBM.
 
-## Descripción microservicio tipo de tarjetas de crédito.
+## Descripción del microservicio sobre tipos de tarjetas de crédito.
 
 ### ¿Qué realiza el microservicio?
 
-El primer microservicio se encarga de encontrar el tipo de tarjeta de crédito acorde a las características del cliente.
+El primer microservicio se encarga de encontrar el tipo de tarjeta de crédito acorde a las características del cliente, ya sea la preferencia, el salario mensual, la edad o todos los parámetros.
 
-Los parámetros para el endpoint son los siguientes:
+Los parámetros para los endpoints son los siguientes:
 
 - passion (preferencia)
 - monthlySalary (salario mensual)
 - age (edad)
 
 Estos parámetros pueden ser opcionales pero al menos debe de haber un parámetro para que funcione el microservicio.
+
+### ¿Cómo interactuar con ellos?
+
+El microservicio interactua a través de otro servicio llamado Gateway, el cual se encargará de enviar y recibir las peticiones desde y hacia el microservicio.
+Es por ello que sólo se necesita la dirección del Gateway y especificar el nombre del microservicio al cual se quiere conectar, además de sus respectivos parámetros para la búsqueda.
 
 
 ### Endpoints
@@ -61,13 +66,13 @@ Con edad y salario mensual:
 
 
 
-## Descripción del segundo microservicio.
+## Descripción del microservicio sobre encontrar un ATM o sucursal.
 
 ### ¿Qué realiza el microservicio?
 
-El microservicio se encarga de encontrar los cajeros automáticos y/o sucursales bancarias de acuerdo a ciertos parámetros.
+El segundo microservicio se encarga de encontrar los cajeros automáticos y/o sucursales bancarias de acuerdo a ciertos parámetros, ya sea por medio del GPS (latitud y/o longitud), código postal, el lugar (Delegación/Estado) o todos los parámetros.
 
-Los parámetros para el endpoint son los siguientes:
+Los parámetros para los endpoints son los siguientes:
 
 - latitude (latitud, corresponde a GPS)
 - longitude (longitud, corresponde a GPS)
@@ -76,9 +81,15 @@ Los parámetros para el endpoint son los siguientes:
 
 Estos parámetros pueden ser opcionales pero al menos debe de haber un parámetro para que funcione el microservicio.
 
+### ¿Cómo interactuar con ellos?
+
+El microservicio interactua a través de otro servicio llamado Gateway, el cual se encargará de enviar y recibir las peticiones desde y hacia el microservicio.
+Es por ello que sólo se necesita la dirección del Gateway y especificar el nombre del microservicio al cual se quiere conectar, además de sus respectivos parámetros para la búsqueda.
+
+
 ### Endpoints
 
-:bulb: El puerto se asigna de manera aleatoria en tiempo de ejecución.
+:bulb: El orden de los parámetros no importa.
   
 - http://localhost:8089/bank-entity-ws/search?latitude=<value\>&longitude=<value\>&postalCode=<value\>&place=<value\>
 - http://localhost:8089/bank-entity-ws/search?latitude=<value\>
