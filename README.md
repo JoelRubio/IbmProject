@@ -92,23 +92,24 @@ Estos parámetros pueden ser opcionales pero al menos debe de haber un parámetr
 ### Capturas de pantalla sobre el resultado de los microservicios
 
 Con todos los parámetros:
-![image](https://user-images.githubusercontent.com/46584463/137562756-58c7e2c7-e155-44be-9da7-c2228f977a1d.png)
+![image](https://user-images.githubusercontent.com/46584463/137604286-3eac901d-3b3c-4a30-84d0-8db04a9ba9e5.png)
 
 
 Sólo la latitud:
-![image](https://user-images.githubusercontent.com/46584463/137562389-5c2d6199-d391-4351-af74-c4e42d3548aa.png)
+![image](https://user-images.githubusercontent.com/46584463/137604253-38fd9e9f-8ce7-44da-bcc8-df72c3e474ff.png)
 
 
 Sólo la longitud:
-![image](https://user-images.githubusercontent.com/46584463/137562553-d53607ed-2664-4b31-ab40-ee48f6bdd7ea.png)
+![image](https://user-images.githubusercontent.com/46584463/137604243-5b126392-1e19-4a4b-8df4-51ab852d2137.png)
 
 
 Sólo el código postal:
-![image](https://user-images.githubusercontent.com/46584463/137562308-ca043416-c16b-4d30-9d21-7fbc8d852010.png)
+![image](https://user-images.githubusercontent.com/46584463/137604233-686def41-09d5-4ab7-b95b-c720764abd2d.png)
 
 
 Sólo el lugar (Delegación/Estado):
-![image](https://user-images.githubusercontent.com/46584463/137562210-81a714d4-7805-4b64-a172-14cdc1db42d4.png)
+![image](https://user-images.githubusercontent.com/46584463/137601669-2358a0b3-6075-43e2-b7fb-43d34a4c3a60.png)
+
 
 
 
