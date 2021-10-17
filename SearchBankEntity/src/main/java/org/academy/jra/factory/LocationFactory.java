@@ -1,4 +1,4 @@
-package org.academy.jra;
+package org.academy.jra.factory;
 
 import org.academy.jra.dto.LocationDTO;
 import org.academy.jra.model.GPS;

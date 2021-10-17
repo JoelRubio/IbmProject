@@ -4,9 +4,9 @@ import java.util.Set;
 
 import javax.ws.rs.core.MediaType;
 
-import org.academy.jra.LocationFactory;
 import org.academy.jra.dto.BankEntityDTO;
 import org.academy.jra.dto.LocationDTO;
+import org.academy.jra.factory.LocationFactory;
 import org.academy.jra.model.LocationModel;
 import org.academy.jra.service.LocationService;
 import org.academy.jra.utils.ErrorMessage;
