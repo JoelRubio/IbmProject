@@ -100,23 +100,24 @@ Es por ello que sólo se necesita la dirección del Gateway y especificar el nom
 ### Capturas de pantalla sobre el resultado de los microservicios
 
 Con todos los parámetros:
-![image](https://user-images.githubusercontent.com/46584463/137604286-3eac901d-3b3c-4a30-84d0-8db04a9ba9e5.png)
+![image](https://user-images.githubusercontent.com/46584463/137644267-3c23d06c-baf4-4a8f-9d9d-d015a7b2c2e8.png)
 
 
 Sólo la latitud:
-![image](https://user-images.githubusercontent.com/46584463/137604253-38fd9e9f-8ce7-44da-bcc8-df72c3e474ff.png)
+![image](https://user-images.githubusercontent.com/46584463/137644284-7a1ddf3c-ddee-4b1a-b2f6-e1e14d2d6faa.png)
 
 
 Sólo la longitud:
-![image](https://user-images.githubusercontent.com/46584463/137604243-5b126392-1e19-4a4b-8df4-51ab852d2137.png)
+![image](https://user-images.githubusercontent.com/46584463/137644294-a347d0b4-3bae-409a-8d24-81e597f2dea0.png)
 
 
 Sólo el código postal:
-![image](https://user-images.githubusercontent.com/46584463/137604233-686def41-09d5-4ab7-b95b-c720764abd2d.png)
+![image](https://user-images.githubusercontent.com/46584463/137644305-3ef0ab8b-c920-4af0-85b5-064496bfd2e8.png)
 
 
 Sólo el lugar (Delegación/Estado):
-![image](https://user-images.githubusercontent.com/46584463/137601669-2358a0b3-6075-43e2-b7fb-43d34a4c3a60.png)
+![image](https://user-images.githubusercontent.com/46584463/137644325-79c596df-c20c-4902-9642-45ba9351a6ea.png)
+
 
 
 
