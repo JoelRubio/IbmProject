@@ -1,11 +1,11 @@
 # IBM Project
-Repositorio que contiene dos microservicios principales para el proyecto de IBM.
+Repositorio que contiene dos microservicios para el proyecto de IBM.
 
-## Descripción del microservicio sobre tipos de tarjetas de crédito.
+## Descripción del primer microservicio sobre tipos de tarjetas de crédito.
 
 ### ¿Qué realiza el microservicio?
 
-El primer microservicio se encarga de encontrar el tipo de tarjeta de crédito acorde a las características del cliente, ya sea la preferencia, el salario mensual, la edad o todos los parámetros.
+El microservicio se encarga de encontrar el tipo de tarjeta de crédito acorde a las características del cliente, ya sea la preferencia, el salario mensual, la edad o todos los parámetros.
 
 Los parámetros para los endpoints son los siguientes:
 
@@ -66,11 +66,11 @@ Con edad y salario mensual:
 
 
 
-## Descripción del microservicio sobre encontrar un ATM o sucursal.
+## Descripción del segundo microservicio sobre encontrar un ATM o sucursal.
 
 ### ¿Qué realiza el microservicio?
 
-El segundo microservicio se encarga de encontrar los cajeros automáticos y/o sucursales bancarias de acuerdo a ciertos parámetros, ya sea por medio del GPS (latitud y/o longitud), código postal, el lugar (Delegación/Estado) o todos los parámetros.
+El microservicio se encarga de encontrar los cajeros automáticos y/o sucursales bancarias de acuerdo a ciertos parámetros, ya sea por medio del GPS (latitud y/o longitud), código postal, el lugar (Delegación/Estado) o todos los parámetros.
 
 Los parámetros para los endpoints son los siguientes:
 
