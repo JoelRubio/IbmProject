@@ -1,11 +1,11 @@
 # Eclipse
-#/.metadata/
-#.classpath
-#.project
-#.settings/
-#/bin
+/.metadata/
+.classpath
+.project
+.settings/
+/bin
 
 # Maven
-#log/
-#target/
+log/
+target/
 
