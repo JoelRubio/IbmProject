@@ -25,7 +25,7 @@ public class Passion {
 	 * @author Joel Rubio
 	 *
 	 */
-	enum LegalPassion {
+	public enum LegalPassion {
 
 		SHOPPING,
 		TRAVELS,

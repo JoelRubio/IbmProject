@@ -167,8 +167,6 @@ public class LocationServiceImpl implements LocationService {
 		} catch (Exception exception) {	
 			
 			log.error(exception.getMessage());
-			
-			exception.printStackTrace();
 		}
 	}
 	
