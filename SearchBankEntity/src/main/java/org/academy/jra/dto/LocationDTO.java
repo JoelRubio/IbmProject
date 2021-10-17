@@ -8,8 +8,8 @@ import lombok.Setter;
 
 /**
  * Clase que representa un DTO
- * de la locación del cajero automático
- * o sucursal a buscar.
+ * de la locación de un ATM
+ * o una sucursal a buscar.
  * 
  * @author Joel Rubio
  *

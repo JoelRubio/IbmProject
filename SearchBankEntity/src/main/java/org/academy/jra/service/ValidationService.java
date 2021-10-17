@@ -107,8 +107,8 @@ public class ValidationService {
 	 * 		   false de lo contrario
 	 */
 	public boolean verifyAddress(final String placeFromClient, 
-			 					  final String addressFromBank, 
-			 					  final String stateFromBank) {
+			 					 final String addressFromBank, 
+			 					 final String stateFromBank) {
 		
 		return addressFromBank.toLowerCase().contains(placeFromClient.toLowerCase()) || 
 			   stateFromBank.equalsIgnoreCase(placeFromClient);

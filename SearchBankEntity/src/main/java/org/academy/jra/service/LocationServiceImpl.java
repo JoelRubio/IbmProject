@@ -261,7 +261,7 @@ public class LocationServiceImpl implements LocationService {
 		final String TYPE      = jsonArray.getString(ValidationConstants.POSITION_FOR_TYPE_OF_PLACE);
 		
 		int counter = 0;
-		
+
 		for (Object object : location.getListObjects()) {
 		
 			if (object instanceof PostalCode && validationService.verifyPostalCode(((PostalCode) object).getNumber(), ADDRESS)) {

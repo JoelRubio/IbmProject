@@ -41,7 +41,7 @@ public class Place {
 	 * para el lugar a buscar del cajero automático 
 	 * o sucursal.
 	 * 
-	 * @param name nombre del lugar a buscar del cajero automático o sucursal
+	 * @param name nombre del lugar a buscar del ATM o sucursal
 	 */
 	private void validatePlace(final String name) {
 
@@ -63,7 +63,7 @@ public class Place {
 	 * Valida que el lugar sólo contenga
 	 * caracteres, si no, arroja una excepción.
 	 * 
-	 * @param place nombre del lugar a buscar del cajero automático o sucursal
+	 * @param place nombre del lugar a buscar del ATM o sucursal
 	 */
 	private void validatePlaceRegex(final String name) {
 		
@@ -74,8 +74,11 @@ public class Place {
 	}
 	
 	/**
+	 * Verifica que la longitud del lugar no sea
+	 * mayor a PLACE_MAX_LENGTH, de lo contrario
+	 * arroja una excepción.
 	 * 
-	 * @param name
+	 * @param name nombre del lugar a buscar del ATM o sucursal
 	 */
 	private void validateLength(final String name) {
 		

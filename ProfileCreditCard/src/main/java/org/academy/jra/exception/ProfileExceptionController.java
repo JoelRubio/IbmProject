@@ -28,6 +28,7 @@ public class ProfileExceptionController {
 	 * 
 	 * @param exception excepción lanzada en la aplicación
 	 * @param request   petición hecha por el cliente
+	 * 
 	 * @return          respuesta con un mensaje de error personalizado
 	 */
 	@ExceptionHandler(EntityNotFoundException.class)
@@ -51,6 +52,7 @@ public class ProfileExceptionController {
 	 * 
 	 * @param exception excepción lanzada en la aplicación
 	 * @param request   petición hecha por el cliente
+	 * 
 	 * @return          respuesta con un mensaje de error personalizado
 	 */
 	@ExceptionHandler(IllegalArgumentException.class)

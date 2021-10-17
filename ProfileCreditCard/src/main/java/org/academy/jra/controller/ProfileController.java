@@ -21,7 +21,7 @@ import io.swagger.annotations.ApiResponses;
 
 
 /**
- * Clase que representa un controlador REST
+ * Clase que representa un controlador REST,
  * el cual contiene métodos que mapearán los 
  * endpoints del servicio Profile.
  * 
@@ -47,11 +47,11 @@ public class ProfileController {
 	
 	/**
 	 * Método que manejára la petición del cliente
-	 * para que se le regrese un tipo de tarjeta de 
-	 * crédito acorde a sus parámetros.
+	 * para que se le regrese un conjunto de tipos 
+	 * de tarjetas de crédito acorde a sus parámetros.
 	 * 
 	 * 
-	 * @param profileDTO parámetros del ciente
+	 * @param profileDTO parámetros para encontrar los tipos de tarjetas de crédito
 	 * 
 	 * @return  conjunto de tipos de tarjeta de crédito de acuerdo a los parámetros del cliente
 	 */

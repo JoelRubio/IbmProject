@@ -47,8 +47,8 @@ public class MonthlySalary {
 	 */
 	private void validateMonthlySalary(final String monthlySalary) {
 		
-		//si el salario mensual es nulo, entonces estaría
-		//vacío el salario mensual con un valor de 0.
+		//si el salario mensual es nulo, entonces
+		//el salario mensual tendrá un valor de 0.
 		if (monthlySalary == null) {
 			
 			this.value = BigDecimal.ZERO;

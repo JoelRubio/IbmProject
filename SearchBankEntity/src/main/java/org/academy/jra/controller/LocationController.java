@@ -20,8 +20,9 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
 /**
- * Clase que representa el controlador REST
- * para el cajero automático o sucursal.
+ * Clase que representa un controlador REST,
+ * el cual contiene métodos que mapearán los 
+ * endpoints del servicio Location.
  * 
  * @author Joel Rubio
  *
@@ -43,9 +44,13 @@ public class LocationController {
 		this.locationService = locationService;
 	}
 	
+	
 	/**
+	 * Método que manejára la petición del cliente
+	 * para que se le regrese un conjunto de locaciones
+	 * de ATMs y/o sucursales de acuerdo a sus parámetros.
 	 * 
-	 * @param locationDTO contiene los parámetros para localizar los cajeros automáticos 
+	 * @param locationDTO parámetros para localizar los cajeros automáticos 
 	 * 
 	 * @return conjunto de ubicaciones de cajeros automáticos de acuerdo a los parámetros dados
 	 */

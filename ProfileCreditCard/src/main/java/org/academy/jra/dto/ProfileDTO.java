@@ -10,7 +10,7 @@ import lombok.Setter;
  * Clase que representa el DTO
  * del perfil del cliente.
  * 
- * @author joel
+ * @author Joel Rubio
  *
  */
 @Getter
@@ -25,8 +25,11 @@ public class ProfileDTO implements Serializable {
 	private String age;
 	
 	/**
+	 * Verifica si todos los atributos de la clase
+	 * están vacíos.
 	 * 
-	 * @return
+	 * @return true si todos los atributos están vacíos,
+	 * 		   false de lo contrario 
 	 */
 	public boolean isEmpty() {
 		

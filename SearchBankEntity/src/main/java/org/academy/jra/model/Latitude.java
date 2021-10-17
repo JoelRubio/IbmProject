@@ -27,8 +27,10 @@ public class Latitude {
 	}
 	
 	/**
+	 * Verifica si la latitud está vacía.
 	 * 
-	 * @return
+	 * @return true si la latitud está vacía (DEFAULT_VALUE),
+	 * 		   false de lo contrario
 	 */
 	public boolean isEmpty() {
 		

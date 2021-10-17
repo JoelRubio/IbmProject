@@ -35,6 +35,9 @@ public class LocationModel {
 	}	
 	
 	/**
+	 * Agrega cada atributo de la clase a
+	 * una lista si no están vacíos, esto
+	 * para una futura validación.
 	 * 
 	 */
 	private void addObjects() {

@@ -28,8 +28,10 @@ public class Longitude {
 	
 	
 	/**
+	 * Verifica si la longitud está vacía.
 	 * 
-	 * @return
+	 * @return true si la longitud está vacía (DEFAULT_VALUE),
+	 * 			    false de lo contrario
 	 */
 	public boolean isEmpty() {
 		

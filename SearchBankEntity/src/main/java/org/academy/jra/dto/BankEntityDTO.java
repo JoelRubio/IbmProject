@@ -6,9 +6,9 @@ import lombok.Builder;
 import lombok.Data;
 
 /**
- * Clase que representa la
- * locación del cajero automático
- * o sucursal encontrado.
+ * Clase que representa un DTO para
+ * la locación de un ATM y/o sucursal 
+ * encontrado.
  * 
  * @author Joel Rubio
  *

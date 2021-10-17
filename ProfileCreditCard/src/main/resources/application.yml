@@ -1,5 +1,5 @@
-#número del puerto a través de una variable de ambiente del sistema
-#o si no hay ninguno, se asignará un puerto aleatorio disponible.
+#número del puerto a través de una variable de ambiente del sistema,
+#si no hay ninguno, se asignará un puerto aleatorio disponible.
 server:
   port: ${PORT:0}
 

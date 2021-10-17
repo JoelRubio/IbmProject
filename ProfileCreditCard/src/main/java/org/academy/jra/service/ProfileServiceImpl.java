@@ -251,11 +251,12 @@ public class ProfileServiceImpl implements ProfileService {
 	}
 	
 	/**
-	 * 
+	 * Convierte el tipo de dato de cada tipo de tarjeta
+	 * de crédito de los perfiles a un DTO. 
 	 * 
 	 * @param profiles lista de perfiles
 	 * 
-	 * @return conjunto con el tipo de tarjetas de crédito
+	 * @return conjunto con el DTO del tipo de tarjetas de crédito
 	 */
 	private Set<CreditCardDTO> getSetObject(List<Profile> profiles) {
 		
@@ -263,7 +264,7 @@ public class ProfileServiceImpl implements ProfileService {
 				.flatMap(profile -> profile.getCreditCards().stream())
 				.collect(Collectors.toSet());
 		
-		//Convierte el tipo de dato
+		//Convierte el tipo de dato hacia un DTO
 		Set<CreditCardDTO> creditCardDTOs = modelMapper.map(result, new TypeToken<Set<CreditCardDTO>>() {}.getType());
 		
 		return creditCardDTOs;
@@ -287,7 +288,7 @@ public class ProfileServiceImpl implements ProfileService {
 																		        profileModel.getAge().getValue())
 				.orElseThrow(() -> new EntityNotFoundException(ErrorMessage.ENTITY_NOT_FOUND));
 		
-		//Convierte el tipo de dato
+		//Convierte el tipo de dato hacia un DTO
 		Set<CreditCardDTO> creditCardDTOs = modelMapper.map(profile.getCreditCards(), new TypeToken<Set<CreditCardDTO>>() {}.getType());
 		
 		return creditCardDTOs;

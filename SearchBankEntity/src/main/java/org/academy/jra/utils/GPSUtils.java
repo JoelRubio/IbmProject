@@ -4,46 +4,52 @@ import java.math.BigDecimal;
 
 /**
  * Clase que representa una utilería
- * para el model GPS.
+ * para el modelo GPS.
  * 
- * @author joel
+ * @author Joel Rubio
  *
  */
 public class GPSUtils {	
 	
 	/**
+	 * Verifica si las partes enteras de 
+	 * dos coordenadas son iguales.
 	 * 
-	 * @param input1
-	 * @param input2
-	 * @return
+	 * @param input1 primera coordenada a comparar
+	 * @param input2 segunda coordenada a comparar
+	 * 
+	 * @return true si las partes enteras son iguales,
+	 * 			    false de lo contrario
 	 */
 	public static boolean isEqualInIntegerPart(final BigDecimal input1, final BigDecimal input2) {
 		
-		System.out.println("integer 1: " + input1);
-		System.out.println("integer 2: " + input2);
-		
 		int input1IntegerPart = input1.intValue();
 		int input2IntegerPart = input2.intValue();
-		
-		System.out.println("integer part 1: " + input1IntegerPart);
-		System.out.println("integer part 2: " + input2IntegerPart);
 		
 		return (input1IntegerPart - input2IntegerPart) == 0;
 	}
 	
 	/**
+	 * Verifica si los primeros 4 decimales
+	 * de dos coordenadas son iguales. 
 	 * 
-	 * @param input1
-	 * @param input2
-	 * @return
+	 * Esto para validar que la distancia entre
+	 * coordenadas no es muy grande. Por ejemplo,
+	 * 1 en el cuarto decimal de una coordenada 
+	 * representa 11.1 metros, y 1 en el quinto decimal 
+	 * representa 1.11 metros.
+	 * 
+	 * 
+	 * @param input1 primera coordenada a comparar
+	 * @param input2 segunda coordenada a comparar
+	 * 
+	 * @return true si los primeros 4 decimales son iguales,
+	 * 		   false de lo contrario
 	 */
 	public static boolean areFirst4DecimalsEquals(final BigDecimal input1, final BigDecimal input2) {
 		
 		String input1DecimalPart = decimalPartToString(input1);
 		String input2DecimalPart = decimalPartToString(input2);
-		
-		System.out.println("input decimal 1: " + input1DecimalPart);
-		System.out.println("input decimal 2: " + input2DecimalPart);
 		
 		if (input1DecimalPart.length() < 4 || input2DecimalPart.length() < 4) {
 			
@@ -54,9 +60,12 @@ public class GPSUtils {
 	}
 
 	/**
+	 * Obtiene la parte decimal de una coordenada
+	 * y la convierte a String.
 	 * 
-	 * @param value
-	 * @return
+	 * @param value coordenada de un GPS
+	 * 
+	 * @return cadena que contiene la parte decimal de una coordenada
 	 */
 	private static String decimalPartToString(BigDecimal value) {
 		
@@ -67,16 +76,28 @@ public class GPSUtils {
 		return tempValue.contains(NEGATIVE_SIGN) ? tempValue.substring(3) : tempValue.substring(2);	
 	}
 
-	
+	/**
+	 * Verifica que los primeros 4 decimales de dos
+	 * coordenadas sean iguales.
+	 * 
+	 * @param value1 primera coordenada a comparar en String
+	 * @param value2 segunda coordenada a comparar en String
+	 * 
+	 * @return true si los primeros 4 decimales de dos coordenadas son iguales,
+	 * 		   false de lo contrario
+	 */
 	private static boolean compare4Decimals(String value1, String value2) {
 		
 		return getFirst4Decimals(value1) == getFirst4Decimals(value2);
 	}
 	
 	/**
+	 * Convierte los primeros 4 decimales de una
+	 * coordenada a entero.
 	 * 
-	 * @param value
-	 * @return
+	 * @param value parte decimal de una coordenada
+	 * 
+	 * @return primeros 4 decimales de una coordenada a entero
 	 */
 	private static int getFirst4Decimals(String value) {
 		
