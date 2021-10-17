@@ -158,9 +158,11 @@ public class LocationServiceImpl implements LocationService {
 			JSONObject jsonObject = new JSONObject(jsonWithDuplicateKeys);
 			
 			
-			log.info("reading JSON file...");
+			log.info("begin reading JSON file...");
 			
 			readLines(jsonObject, location, locations);
+			
+			log.info("end reading JSON file...");
 			
 		} catch (Exception exception) {	
 			
