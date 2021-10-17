@@ -37,31 +37,31 @@ Es por ello que sólo se necesita la dirección del Gateway y especificar el nom
 ### Capturas de pantalla sobre el resultado de los microservicios
 
 Con todos los parámetros:
-![image](https://user-images.githubusercontent.com/46584463/137598078-05de66c9-b29e-48b8-b00f-6cd4b7157ffc.png)
+![image](https://user-images.githubusercontent.com/46584463/137610002-81fed063-2884-47da-b950-8a66dbd1b7a6.png)
 
 
 Sólo con la preferencia:
-![image](https://user-images.githubusercontent.com/46584463/137597888-6e7f853e-c177-474d-81f3-7182fc430b08.png)
+![image](https://user-images.githubusercontent.com/46584463/137610019-7cc073a6-422d-4513-b3a7-1243708a5ca1.png)
 
 
 Sólo con la edad:
-![image](https://user-images.githubusercontent.com/46584463/137598028-ae21c2be-39db-4d6e-afe5-a5f14df9968c.png)
+![image](https://user-images.githubusercontent.com/46584463/137610034-5cca670b-fcb3-4141-901e-d3d5f606e384.png)
 
 
 Sólo con el salario mensual:
-![image](https://user-images.githubusercontent.com/46584463/137598018-ecc2eefd-44ab-4518-879f-1b03c8e32f27.png)
+![image](https://user-images.githubusercontent.com/46584463/137610050-5d7c04d0-8e79-4554-85e2-a91241dc4ac7.png)
 
 
 Con preferencia y salario mensual:
-![image](https://user-images.githubusercontent.com/46584463/137598123-97bcdbae-c087-465d-a981-ee0d6588fbc2.png)
+![image](https://user-images.githubusercontent.com/46584463/137610075-f27c6620-2cc9-481e-92dd-a65fd3e70b98.png)
 
 
 Con preferencia y edad:
-![image](https://user-images.githubusercontent.com/46584463/137598141-e985c64f-4b85-41c4-9615-fe660d70c08e.png)
+![image](https://user-images.githubusercontent.com/46584463/137610088-45e16c47-ccf1-4785-b45e-828d39dbbabf.png)
 
 
 Con edad y salario mensual:
-![image](https://user-images.githubusercontent.com/46584463/137598167-8de4dfe1-bd29-481e-babe-f56c24970faa.png)
+![image](https://user-images.githubusercontent.com/46584463/137610097-595e43a2-135a-4362-a055-52d1d00cc14a.png)
 
 
 
