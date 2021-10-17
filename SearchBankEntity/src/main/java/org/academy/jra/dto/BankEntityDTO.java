@@ -21,7 +21,10 @@ public class BankEntityDTO implements Serializable {
 
 	private String latitude;
 	private String longitude;
+	private String street;
 	private String address;
 	private String state;
+	private String hourOpen;
+	private String hourClose;
 	private String type;
 }

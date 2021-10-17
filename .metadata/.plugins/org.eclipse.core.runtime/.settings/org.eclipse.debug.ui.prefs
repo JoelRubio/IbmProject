@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+org.eclipse.debug.ui.consoleBackground=245,245,245
+overriddenByCSS=,org.eclipse.debug.ui.consoleBackground,
+preferredTargets=org.eclipse.lsp4e.debug.toggleBreakpointTarget\:org.eclipse.lsp4e.debug.toggleBreakpointTarget|

@@ -300,13 +300,19 @@ public class LocationServiceImpl implements LocationService {
 		
 			return Optional.empty();
 		 }
-			
+		
+		final String STREET     = jsonArray.getString(ValidationConstants.POSITION_FOR_STREET);
+		final String HOUR_OPEN  = jsonArray.getString(ValidationConstants.POSITION_FOR_HOUR_OPEN);
+		final String HOUR_CLOSE = jsonArray.getString(ValidationConstants.POSITION_FOR_HOUR_CLOSE);
 		
 		BankEntityDTO bankEntity = BankEntityDTO.builder()
 			.latitude(LATITUDE)
 			.longitude(LONGITUDE)
+			.street(STREET)
 			.address(ADDRESS)
 			.state(STATE)
+			.hourOpen(HOUR_OPEN)
+			.hourClose(HOUR_CLOSE)
 			.type(TYPE)
 			.build();
 		

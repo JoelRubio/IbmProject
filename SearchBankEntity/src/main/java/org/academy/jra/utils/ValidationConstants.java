@@ -24,7 +24,10 @@ public interface ValidationConstants {
 	String LATITUDE_COORDINATE_REGEX  = "(\\+|-)?(?:90(?:(?:\\.0{1,8})?)|(?:[0-9]|[1-8][0-9])(?:(?:\\.[0-9]{1,8})?))";
 	String LONGITUDE_COORDINATE_REGEX = "(\\+|-)?(?:180(?:(?:\\.0{1,8})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])(?:(?:\\.[0-9]{1,8})?))";
 	
+	int POSITION_FOR_STREET        = 3;
 	int POSITION_FOR_ADDRESS       = 4;
+	int POSITION_FOR_HOUR_OPEN     = 13;
+	int POSITION_FOR_HOUR_CLOSE    = 14;
 	int POSITION_FOR_LONGITUDE     = 15;
 	int POSITION_FOR_LATITUDE      = 16;
 	int POSITION_FOR_STATE         = 17;
