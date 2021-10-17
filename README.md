@@ -118,6 +118,7 @@ Sólo el código postal:
 Sólo el lugar (Delegación/Estado):
 ![image](https://user-images.githubusercontent.com/46584463/137644325-79c596df-c20c-4902-9642-45ba9351a6ea.png)
 
+:bulb: También es posible realizar combinaciones con los parámetros, pero debido a la brevedad del archivo se omitieron esos casos.
 
 
 
