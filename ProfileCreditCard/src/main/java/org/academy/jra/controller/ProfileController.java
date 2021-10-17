@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 
 
 /**
@@ -55,6 +57,11 @@ public class ProfileController {
 	 */
 	@ApiOperation(value = "Obtiene el tipo de tarjeta de crédito de acuerdo a la preferencia,"
 			            + "el sueldo mensual, y la edad de la persona.")
+	@ApiResponses(value = {
+			@ApiResponse(code = 200, message = "OK"),
+			@ApiResponse(code = 400, message = "Bad Request"),
+			@ApiResponse(code = 404, message = "Not Found")
+	})
 	@GetMapping(produces = MediaType.APPLICATION_JSON)
 	public ResponseEntity<Set<CreditCardDTO>> getCreditCardType(ProfileDTO profileDTO) {
 		

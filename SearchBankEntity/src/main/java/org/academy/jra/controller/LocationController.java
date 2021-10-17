@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 
 /**
  * Clase que representa el controlador REST
@@ -48,6 +50,11 @@ public class LocationController {
 	 * @return conjunto de ubicaciones de cajeros automáticos de acuerdo a los parámetros dados
 	 */
 	@ApiOperation(value = "Obtiene los cajeros automáticos más cercanos de acuerdo a las características dadas")
+	@ApiResponses(value = {
+			@ApiResponse(code = 200, message = "OK"),
+			@ApiResponse(code = 400, message = "Bad Request"),
+			@ApiResponse(code = 404, message = "Not Found")
+	})
 	@GetMapping(produces = MediaType.APPLICATION_JSON)
 	public ResponseEntity<Set<BankEntityDTO>> getATMLocations(LocationDTO locationDTO) {
 	
