@@ -104,7 +104,7 @@ Con todos los parámetros:
 
 
 Sólo la latitud:
-![image](https://user-images.githubusercontent.com/46584463/137644284-7a1ddf3c-ddee-4b1a-b2f6-e1e14d2d6faa.png)
+![image](https://user-images.githubusercontent.com/46584463/137771376-e695976a-cf5c-4ef2-b6e3-981e20d18821.png)
 
 
 Sólo la longitud:
