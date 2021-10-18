@@ -100,7 +100,7 @@ Es por ello que sólo se necesita la dirección del Gateway y especificar el nom
 ### Capturas de pantalla sobre el resultado de los microservicios
 
 Con todos los parámetros:
-![image](https://user-images.githubusercontent.com/46584463/137644267-3c23d06c-baf4-4a8f-9d9d-d015a7b2c2e8.png)
+![image](https://user-images.githubusercontent.com/46584463/137771223-484844a4-c634-465b-866a-30a0e7316972.png)
 
 
 Sólo la latitud:
