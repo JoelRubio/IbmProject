@@ -33,11 +33,11 @@ public class ValidationService {
 	 */
 	public boolean verifyTypeOfPlace(final String type) {
 		
-		if (BankEntityPlace.ATM.toString().contains(type)) {
+		if (type.toUpperCase().contains(BankEntityPlace.ATM.toString())) {
 			return true;
 		}
 		
-		if (BankEntityPlace.SUCURSAL.toString().contains(type.toUpperCase())) {
+		if (type.toUpperCase().contains(BankEntityPlace.SUCURSAL.toString())) {
 			return true;
 		}
 		
